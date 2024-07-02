@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Copiar al Portapapeles</title>
+</head>
+<body>
+    <p>Haz clic en el siguiente enlace para copiar la cadena al portapapeles:</p>
+    <a href="#" onclick="copyToClipboard('Esta es la cadena que quiero copiar')">Copiar cadena</a>
+
+    <script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            alert('Texto copiado al portapapeles');
+        }, function(err) {
+            console.error('Error al copiar el texto: ', err);
+        });
+    }
+    </script>
+</body>
+</html>
